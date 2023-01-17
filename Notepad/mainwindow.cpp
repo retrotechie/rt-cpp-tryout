@@ -6,6 +6,8 @@ MainWindow::MainWindow(QWidget *parent)
     , ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
+
+    this->setCentralWidget(ui->textEdit);   // Select `textEdit` as a central widget
 }
 
 MainWindow::~MainWindow()
