@@ -79,6 +79,7 @@
    <addaction name="actionPrint"/>
    <addaction name="actionCopy"/>
    <addaction name="actionPaste"/>
+   <addaction name="actionCut"/>
   </widget>
   <action name="actionNew">
    <property name="icon">
@@ -144,6 +145,10 @@
    </property>
   </action>
   <action name="actionCut">
+   <property name="icon">
+    <iconset resource="Resources.qrc">
+     <normaloff>:/images/Cut.bmp</normaloff>:/images/Cut.bmp</iconset>
+   </property>
    <property name="text">
     <string>Cut</string>
    </property>

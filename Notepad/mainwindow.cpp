@@ -126,3 +126,13 @@ void MainWindow::on_actionPaste_triggered()
     ui->textEdit->paste();
 }
 
+/*!
+ * \brief MainWindow::on_actionCut_triggered
+ *
+ * Cut.
+ */
+void MainWindow::on_actionCut_triggered()
+{
+    ui->textEdit->cut();
+}
+
