@@ -74,6 +74,7 @@
     <bool>false</bool>
    </attribute>
    <addaction name="actionNew"/>
+   <addaction name="actionOpen"/>
   </widget>
   <action name="actionNew">
    <property name="icon">
@@ -85,6 +86,10 @@
    </property>
   </action>
   <action name="actionOpen">
+   <property name="icon">
+    <iconset resource="Resources.qrc">
+     <normaloff>:/images/Open.bmp</normaloff>:/images/Open.bmp</iconset>
+   </property>
    <property name="text">
     <string>Open</string>
    </property>
