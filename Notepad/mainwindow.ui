@@ -77,6 +77,8 @@
    <addaction name="actionOpen"/>
    <addaction name="actionSave_As"/>
    <addaction name="actionPrint"/>
+   <addaction name="actionCopy"/>
+   <addaction name="actionPaste"/>
   </widget>
   <action name="actionNew">
    <property name="icon">
@@ -124,11 +126,19 @@
    </property>
   </action>
   <action name="actionCopy">
+   <property name="icon">
+    <iconset resource="Resources.qrc">
+     <normaloff>:/images/Copy.bmp</normaloff>:/images/Copy.bmp</iconset>
+   </property>
    <property name="text">
     <string>Copy</string>
    </property>
   </action>
   <action name="actionPaste">
+   <property name="icon">
+    <iconset resource="Resources.qrc">
+     <normaloff>:/images/Paste.bmp</normaloff>:/images/Paste.bmp</iconset>
+   </property>
    <property name="text">
     <string>Paste</string>
    </property>

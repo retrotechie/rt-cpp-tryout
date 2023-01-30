@@ -106,3 +106,23 @@ void MainWindow::on_actionExit_triggered()
     QApplication::quit();
 }
 
+/*!
+ * \brief MainWindow::on_actionCopy_triggered
+ *
+ * Copy.
+ */
+void MainWindow::on_actionCopy_triggered()
+{
+    ui->textEdit->copy();
+}
+
+/*!
+ * \brief MainWindow::on_actionPaste_triggered
+ *
+ * Paste.
+ */
+void MainWindow::on_actionPaste_triggered()
+{
+    ui->textEdit->paste();
+}
+
