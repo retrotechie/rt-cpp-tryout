@@ -9,5 +9,7 @@
         <file>Save.bmp</file>
         <file>Printer.bmp</file>
         <file>Exit.bmp</file>
+        <file>Redo.bmp</file>
+        <file>Undo.bmp</file>
     </qresource>
 </RCC>

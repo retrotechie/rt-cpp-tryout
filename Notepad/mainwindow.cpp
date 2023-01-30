@@ -136,3 +136,23 @@ void MainWindow::on_actionCut_triggered()
     ui->textEdit->cut();
 }
 
+/*!
+ * \brief MainWindow::on_actionUndo_triggered
+ *
+ * Undo.
+ */
+void MainWindow::on_actionUndo_triggered()
+{
+    ui->textEdit->undo();
+}
+
+/*!
+ * \brief MainWindow::on_actionRedo_triggered
+ *
+ * Redo.
+ */
+void MainWindow::on_actionRedo_triggered()
+{
+    ui->textEdit->redo();
+}
+

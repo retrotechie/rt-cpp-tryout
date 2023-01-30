@@ -80,6 +80,8 @@
    <addaction name="actionCopy"/>
    <addaction name="actionPaste"/>
    <addaction name="actionCut"/>
+   <addaction name="actionUndo"/>
+   <addaction name="actionRedo"/>
   </widget>
   <action name="actionNew">
    <property name="icon">
@@ -154,11 +156,19 @@
    </property>
   </action>
   <action name="actionUndo">
+   <property name="icon">
+    <iconset resource="Resources.qrc">
+     <normaloff>:/images/Undo.bmp</normaloff>:/images/Undo.bmp</iconset>
+   </property>
    <property name="text">
     <string>Undo</string>
    </property>
   </action>
   <action name="actionRedo">
+   <property name="icon">
+    <iconset resource="Resources.qrc">
+     <normaloff>:/images/Redo.bmp</normaloff>:/images/Redo.bmp</iconset>
+   </property>
    <property name="text">
     <string>Redo</string>
    </property>
