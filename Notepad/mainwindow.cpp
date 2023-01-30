@@ -96,3 +96,13 @@ void MainWindow::on_actionPrint_triggered()
     ui->textEdit->print(&printer);
 }
 
+/*!
+ * \brief MainWindow::on_actionExit_triggered
+ *
+ * Exit.
+ */
+void MainWindow::on_actionExit_triggered()
+{
+    QApplication::quit();
+}
+

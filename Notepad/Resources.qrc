@@ -8,5 +8,6 @@
         <file>Paste.bmp</file>
         <file>Save.bmp</file>
         <file>Printer.bmp</file>
+        <file>Exit.bmp</file>
     </qresource>
 </RCC>

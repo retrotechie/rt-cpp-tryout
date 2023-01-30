@@ -115,6 +115,10 @@
    </property>
   </action>
   <action name="actionExit">
+   <property name="icon">
+    <iconset resource="Resources.qrc">
+     <normaloff>:/images/Exit.bmp</normaloff>:/images/Exit.bmp</iconset>
+   </property>
    <property name="text">
     <string>Exit</string>
    </property>
