@@ -64,6 +64,7 @@ void MainWindow::on_actionSave_As_triggered()
 
     if (!file.open(QFile::WriteOnly | QFile::Text)) {
         QMessageBox::warning(this, "Warning", "Cannot save file " + file.errorString());
+        return;
     }
 
     currentFile = fileName;
@@ -74,5 +75,24 @@ void MainWindow::on_actionSave_As_triggered()
     QString text = ui->textEdit->toPlainText();
     out << text;
     file.close();
+}
+
+/*!
+ * \brief MainWindow::on_actionPrint_triggered
+ *
+ * Access and configure printer.
+ */
+void MainWindow::on_actionPrint_triggered()
+{
+    QPrinter printer;
+    printer.setPrinterName("Printer name");
+    QPrintDialog printerDialog(&printer, this); // Specify the printer's configuration
+
+    if (printerDialog.exec() == QDialog::Rejected) {
+        QMessageBox::warning(this, "Warning", "Cannot access printer");
+        return;
+    }
+
+    ui->textEdit->print(&printer);
 }
 

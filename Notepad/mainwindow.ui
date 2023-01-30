@@ -76,6 +76,7 @@
    <addaction name="actionNew"/>
    <addaction name="actionOpen"/>
    <addaction name="actionSave_As"/>
+   <addaction name="actionPrint"/>
   </widget>
   <action name="actionNew">
    <property name="icon">
@@ -105,6 +106,10 @@
    </property>
   </action>
   <action name="actionPrint">
+   <property name="icon">
+    <iconset resource="Resources.qrc">
+     <normaloff>:/images/Printer.bmp</normaloff>:/images/Printer.bmp</iconset>
+   </property>
    <property name="text">
     <string>Print</string>
    </property>

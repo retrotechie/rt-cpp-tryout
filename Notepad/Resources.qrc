@@ -7,5 +7,6 @@
         <file>Open.bmp</file>
         <file>Paste.bmp</file>
         <file>Save.bmp</file>
+        <file>Printer.bmp</file>
     </qresource>
 </RCC>
