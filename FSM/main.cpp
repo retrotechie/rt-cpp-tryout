@@ -1,7 +1,8 @@
 #include "./inc/state_manager.h"
 
-int main() {
+int main()
+{
     CStateManager csm;
-    csm.run();
+    csm.runState();
     return 0;
 }

@@ -1,30 +1,23 @@
 #ifndef STATE_H
 #define STATE_H
 
-class AState {  // Abstract (a blueprint with some implementations, cannot be instantiated)  
-    private:
-        bool isFinished;
-        int nextStage;
-        int userAction;
-        bool isSelected;
+class AState // Abstract (a blueprint with some implementations, cannot be instantiated)
+{
+private:
+    bool isFinished;
+    int nextState;
 
-    public:
-        AState();
+public:
+    AState();
 
-        void setIsFinished(bool b);
-        int getIsFinished();
-        
-        void setNextStage(int stageID);
-        int getNextStage();
+    void setIsFinished(bool b);
+    int getIsFinished();
 
-        void setUserAction(int stageID);
-        int getUserAction();
+    void setNextState(int stateID);
+    int getNextState();
 
-        void setIsSelected(bool b);
-        bool getIsSelected();
+    virtual void update() = 0; // pure virtual func (abstract method)
+    virtual void render() = 0; // pure virtual func (abstract method)
+};                             // * Don't forget `;`
 
-        virtual void update() = 0;  // pure virtual func (abstract method)
-        virtual void display() = 0; // pure virtual func (abstract method)
-};  // * Don't forget `;`
-
-#endif  // STATE_H
+#endif // STATE_H

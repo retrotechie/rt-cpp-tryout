@@ -1,30 +1,34 @@
 #ifndef STATE_MANAGER_H
 #define STATE_MANAGER_H
 
+#include "./menu.h"
+
 #include <iostream>
 #include <unistd.h> // For `usleep()`
 #include <stdlib.h> // For `system("clear")`
 
 using namespace std;
 
-class CStateManager {    // Class
-    private:
-        bool isRunning;
-        int state;
+class CStateManager // Class
+{
+private:
+    bool isRunning;
+    int state;
 
-    public:
-        CStateManager();
+    CMenu menu;
 
-        void setIsRunning(bool b);
-        bool getIsRunning();
+public:
+    CStateManager();
 
-        void setState(int stateID);
-        int getState();
+    void setIsRunning(bool b);
+    bool getIsRunning();
 
-        void run();
-        void update();
-        void load(int stateID);
-        void exit();
+    void setState(int stateID);
+    int getState();
+
+    void runState();
+    void updateState();
+    void exitState();
 };
 
-#endif  // STATE_MANAGER_H
+#endif // STATE_MANAGER_H

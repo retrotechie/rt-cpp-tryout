@@ -1,4 +1,4 @@
-OBJS = main.o state_manager.o state.o
+OBJS = main.o state_manager.o state.o menu.o
 CC = g++
 
 FSM: $(OBJS)
@@ -13,6 +13,9 @@ state_manager.o:
 
 state.o:
 	$(CC) -c ./src/state.cpp	# -> state.o
+
+menu.o:
+	$(CC) -c ./src/menu.cpp	# -> menu.o
 
 clean:	
 	rm -f core FSM $(OBJS)	# -------------- Clean -------------- #
