@@ -1,4 +1,4 @@
-OBJS = main.o state_manager.o
+OBJS = main.o state_manager.o state.o
 CC = g++
 
 FSM: $(OBJS)
@@ -6,11 +6,19 @@ FSM: $(OBJS)
 	rm -f $(OBJS)	# Remove *.o files
 
 main.o:	
-	$(CC) -c ./main.cpp
+	$(CC) -c ./main.cpp	# -> main.o  
 
 state_manager.o:
-	$(CC) -c ./src/state_manager.cpp
+	$(CC) -c ./src/state_manager.cpp	# -> state_manager.o
+
+state.o:
+	$(CC) -c ./src/state.cpp	# -> state.o
 
 clean:	
-	rm -f core FSM $(OBJS)
+	rm -f core FSM $(OBJS)	# -------------- Clean -------------- #
 
+run:
+	./FSM	# -------------- Run -------------- # 
+
+rebuild:
+	make clean; make	# -------------- Rebuild -------------- #
