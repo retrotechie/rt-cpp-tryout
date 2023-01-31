@@ -1,5 +1,5 @@
-#ifndef MENU_H
-#define MENU_H
+#ifndef ABOUT_H
+#define ABOUT_H
 
 #include "./state.h"
 
@@ -7,10 +7,10 @@
 
 using namespace std;
 
-class CMenu : public AState // Derived class from abstract `State`
+class CAbout : public AState // Derived class from abstract `State`
 {
 public:
-    CMenu();
+    CAbout();
 
     // `virtual` can only be used inside class definition
     virtual void update() override
@@ -37,13 +37,14 @@ public:
     virtual void render() override
     {
         cout << "*―――――――――――――――――――――――――――――――――――――――――――――――――――――*\n";
-        cout << "│                Finite State Machine                 │\n";
+        cout << "│                         ABOUT                       │\n";
         cout << "*―――――――――――――――――――――――――――――――――――――――――――――――――――――*\n";
-        cout << "│                     1. Menu                         │\n";
-        cout << "│                     2. About                        │\n";
-        cout << "│                     0. Exit                         │\n";
+        cout << "│                  Author : Retro Techie              │\n";
+        cout << "│                  Github : retrotechie               │\n";
+        cout << "*―――――――――――――――――――――――――――――――――――――――――――――――――――――*\n";
+        cout << "│       1. Menu          2. About          0. Exit    │\n";
         cout << "*―――――――――――――――――――――――――――――――――――――――――――――――――――――*\n";
     }
 };
 
-#endif // MENU_H
+#endif // ABOUT_H

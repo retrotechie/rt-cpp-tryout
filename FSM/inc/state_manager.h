@@ -2,9 +2,10 @@
 #define STATE_MANAGER_H
 
 #include "./menu.h"
+#include "./about.h"
 
 #include <iostream>
-#include <unistd.h> // For `usleep()`
+// #include <unistd.h> // For `usleep()`
 #include <stdlib.h> // For `system("clear")`
 
 using namespace std;
@@ -16,6 +17,7 @@ private:
     int state;
 
     CMenu menu;
+    CAbout about;
 
 public:
     CStateManager();

@@ -3,7 +3,7 @@
 CStateManager::CStateManager()
 {
     this->setIsRunning(true);
-    this->setState(1); // 1: Main menu; 2: Actions; 3: About; 0: Exit
+    this->setState(1); // 1: Main menu; 2: About; 0: Exit
 }
 
 void CStateManager::setIsRunning(bool b)
@@ -54,8 +54,15 @@ void CStateManager::updateState()
         }
         break;
     case 2:
-        break;
-    case 3:
+        if (!about.getIsFinished())
+        {
+            about.update();
+        }
+        else
+        {
+            this->setState(about.getNextState());
+            about.setIsFinished(false);
+        }
         break;
     case 0:
         this->exitState();
